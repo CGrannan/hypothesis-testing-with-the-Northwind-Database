@@ -1,8 +1,6 @@
 
 # Repository Outline
 
-## Introduction
-
 Welcome! The goal of this project is to extract data from the Northwind Database using SQL and to demonstrate statistical analysis and hypothesis testing to discover meaningful patterns. This document is meant to outline the contents of this repository for easy navigation.
 
 Notebook.ipynb is the jupyter notebook that contains all of my code and statistical analysis.
