@@ -1,10 +1,11 @@
+# Hypothesis Testing with the Northwind Database
 
-## Introduction
-In this project we are going to examine different factors in the Northwind database and their influence on sales. We will be exploring the effects of discounts, order frequency and individual employees on the quantities of items sold and the average prices of orders. The Northwind Database contains sample sales records for a company named "Northwind Traders." Below is a schema for the shape of the database.
+## Project Overview
+The goal of this project is to extract information from the northwind database using SQl and to demonstrate a keen grasp on hypothesis testing procedures. Below is a schema showing the structure of the northwind database.
 
-![Northwind_ERD_updated.png](attachment:Northwind_ERD_updated.png)
+![Northwind_ERD_updated.png](Northwind_ERD_updated.png)
 
-The project will be broken down into individual questions and each question will follow a similar pattern. We will present the null and alternate hypothesis, collect our sample, examine and clean our data, then test the data to determine an effect. We will use a variety of tests to examine the data.
+The project is broken down into individual questions and each question will follow a similar pattern. We will present the null and alternate hypothesis, collect our sample, examine and clean our data, then test the data to determine an effect. We will use a variety of tests to examine the data.
 
 ## Question 1: Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?
 We will begin by looking at the effect of discount on the quantity of items that are ordered. This question will be broken down into two hypothesis. The first will test for the effect of any discount on quantity. If that test demonstrates a significant effect, then we will test different discount levels to determine at what levels the effect is noticeable.
@@ -19,9 +20,9 @@ For this test we will run a one-tailed (only looking for a larger effect) t-test
 ### Exploratory Analysis
 Before we run our t-test, we will look a graphical representations of our data. First, we will look at the average quantity ordered with a discount and without a discount; then, we will break down this information by product ID to make sure that overall trends are present across multiple products.
 
-![items_ordered_by_discount.png](attachment:mod3_project_charts.items_ordered_by_discount.png)
+![items_ordered_by_discount.png](mod3_project_charts.items_ordered_by_discount.png)
 
-![items_ordered_by_product_id.png](attachment:mod3_project_charts.items_ordered_by_product_id.png)
+![items_ordered_by_product_id.png](mod3_project_charts.items_ordered_by_product_id.png)
 
 The graphs indicate that discounted orders generally contain a larger quantity of items, but let's determine if this is a significant difference.
 
@@ -40,7 +41,7 @@ For this test, we will run a one-way anova with an alpha level of 0.05.
 ### Exploratory Analysis
 We will start by looking at the mean quantity for each discount level.
 
-![items_ordered_by_discount_level.png](attachment:mod3_project_charts.items_ordered_by_discount_level.png)
+![items_ordered_by_discount_level.png](mod3_project_charts.items_ordered_by_discount_level.png)
 
 My first impression from the graph is that we will not have a significant difference between discount levels as the means are very close to each other. To test this, we will run a one-way ANOVA.
 
@@ -54,9 +55,9 @@ Next we want to see if returning customers are likely to get a discount. We will
 
 ### Exploratory Analysis
 Before we outline our hypotheses, we will look at boxplots of our data to check for outlies. We will look at the number of orders first.
-![boxplot_num_orders.png](attachment:mod3_project_charts.boxplot_num_orders.png)
+![boxplot_num_orders.png](mod3_project_charts.boxplot_num_orders.png)
 
-![boxplot_total_spent.png](attachment:mod3_project_charts.boxplot_total_spent.png)
+![boxplot_total_spent.png](mod3_project_charts.boxplot_total_spent.png)
 
 ### First Hypothesis
 𝐻𝑂 : All companies will have the same disount level
@@ -66,7 +67,7 @@ Before we outline our hypotheses, we will look at boxplots of our data to check 
 We will be conducting a one-tailed linear regression to test this hypothesis. We will again use an alpha level of .05.
 
 With a p-value lower than .001 and a positive coefficient, we are able to reject the null hypothesis. Companies with more orders do have a significantly higher average discount rate. It is interesting to note that our interept is not significant with a p-value of .773; however, since there are no companies with zero orders, this is not a particularly useful metric. Let's chart the regression analysis to get a better idea of our effect.
-![discounts_per_num_orders.png](attachment:mod3_project_charts.discounts_per_num_orders.png)
+![discounts_per_num_orders.png](mod3_project_charts.discounts_per_num_orders.png)
 
 With an  𝑅2  of .235, we can see that the number of orders a company has placed with Northwind Traders has a significant, but not necessarily strong effect on discount. The variance in discount level is not adequately explained by our regression model.
 ### Second Hypothesis
@@ -76,7 +77,7 @@ Ha: Companies who have spent more will have a higher discount level.
 
 We will also use a one-tailed linear regression analysis for this test.
 Again we have a p-value(0) lower than our alpha level. We can reject the null hypothesis. The amount that a company has spent does have a significant effect on discount level. Let's look at a plot of this model.
-![discounts_per_total_spent.png](attachment:mod3_project_charts.discounts_per_total_spent.png)
+![discounts_per_total_spent.png](mod3_project_charts.discounts_per_total_spent.png)
 
 This model doesn't look any better than the first one. Both the  𝑅2  (.216) and the regression coefficient are smaller than those in the model with order frequency. Overall this model also doesn't explain enough variance in discount levels to be satisfactory.
 
@@ -94,12 +95,12 @@ Next, we want to see how the sales record of discounted items varies between emp
 ### Exploratory Analysis
 First we will look at a bar chart of discounted items versus non discounted items broken down by employee ID numbers. This will give us an idea of how sales change for each employee when items are discounted.
 
-![quantity_sold_by_employee_id.png](attachment:mod3_project_charts.quantity_sold_by_employee_id.png)
+![quantity_sold_by_employee_id.png](mod3_project_charts.quantity_sold_by_employee_id.png)
 
 
 It looks like most employees have somewhat improved sales when items are discounted, but some make large jumps. Lets break this chart down further by looking at each discount level by employee ID.
 
-![quantity_sold_by_employee_id_and_discount_level.png](attachment:mod3_project_charts.quantity_sold_by_employee_id_and_discount_level.png)
+![quantity_sold_by_employee_id_and_discount_level.png](mod3_project_charts.quantity_sold_by_employee_id_and_discount_level.png)
 
 There are noticeable differences between employees at each discount level. Let's run an ANOVA testing the effect of discount level and employee ID on the quantity of items sold with an alpha level of .05.
 
@@ -116,7 +117,7 @@ Finally we are going to look at the categories of our products. We are going to 
 ### Exploratory Analysis
 Let's take a look at a barchart of our data. We will look at the average discount level for each category.
 
-![discount_by_category.png](attachment:mod3_project_charts.discount_by_category.png)
+![discount_by_category.png](mod3_project_charts.discount_by_category.png)
 
 With a p-value of .149, we cannot reject the null hypothesis. There is no significant difference in discount levels between types of products.
 
