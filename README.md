@@ -6,7 +6,7 @@ The goal of this project is to extract information from the northwind database u
 
 ![Northwind_ERD_updated.png](Northwind_ERD_updated.png)
 
-The project is broken down into four individual questions and evaluating each question followed a similar pattern. We presented the null and alternate hypothesis, explored our data, then performed a hypothesis test to determine an effect. I will briefly outline the project here, but I would suggest looking at the notebook inside this repository as it contains all of my code and shows the process of working with the dataset.
+The project is broken down into four individual questions and evaluating each question followed a similar pattern. We present the null and alternate hypothesis, explore our data, then perform a hypothesis test to determine an effect. I will briefly outline the project here, but I would suggest looking at the notebook inside this repository as it contains all of my code and shows the process of working with the dataset.
 
 ## The Questions
 
