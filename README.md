@@ -125,6 +125,8 @@ Some employees sell significantly more discounted products than others and this 
 
 There is no significant difference in discount level between categories of products.
 
+What does this mean for Northwind Traders? Discounts are being used to effectively sell products and retain customers. This should lead to increased sales. Differing discount amounts are not affecting quantities of items sold, nor is the size of a discount affecting customer retention strongly. This means that discount levels are not being used effectively. There is no need for a larger discount if a smaller one accomplishes the same goal. Also, employees may need more consistent training as they are showing significantly differences in their sales of discounted projects. Discount levels are spread evenly across product categories, meaning discounts are not being used to strategically target products that Northwind Traders wants/needs to sell. There is room for improvement in the business, and by addresssing these issues we can increase sales and decrease costs.
+
 ## Future Work
 
 There are several ways to expand the scope of this project.  First, I would recommend breaking down employee sales records further. I am interested to see if there are other differences between employees such as items sold by category of product. There is a lot of potential information that can be explored here.  Second I would look at the effect of region on sales. There may very well be an effect of region on discount levels, categories of items ordered, or number of orders. And finally, I would also look at finding how discount levels are set.  There are many possible predictors in the database and I am curious to see if any of them strongly correlate with discount level.
