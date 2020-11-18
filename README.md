@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The goal of this project is to extract information from the northwind database using SQl and to demonstrate a keen grasp on hypothesis testing procedures. The Northwind Database contains sample sales records for a ficticious company named "Northwind Traders." Below is a schema showing the structure of the northwind database.
+For this project we are going to evaluate how the Northwind Traders are using their discounts. When used strategically, discounts can lead to increased sales and customer retention. When used incorrectly, discounts represent lost revenue as products are sold at a lower cost. Our goals for this project are to determine if discounts at Northwind Traders are being used to sell more prduct, entice customers to return and lower waste costs. To accomplish these goals, we are using the Northwind database.
 
 ![Northwind_ERD_updated.png](Northwind_ERD_updated.png)
 
@@ -97,7 +97,7 @@ It looks like most employees have somewhat improved sales when items are discoun
 
 ![quantity_sold_by_employee_id_and_discount_level.png](mod3_project_charts/quantity_sold_by_employee_id_and_discount_level.png)
 
-There are noticeable differences between employees at each discount level. We ran a two-way ANOVA testing the effect of discount level and employee ID on the quantity of items sold with an alpha level of 0.05. With a p-value of 0.01, there is a significant effect between employee ID and the quantity of discounted items sold, but there is not a significant effect for the discount level with a p-value of 0.12.
+There are noticeable differences between employees at each discount level. We ran a one-way ANOVA to test for a significant effect of employee ID on quantity of items per order. With a p-value of .01, we rejected the null hyothesis. Employees sell a significnatly different amount of discounted items. After running a Turkey-Test, we discovered employee 2 sold significantly more discounted items than employees 6 and 8.  Furthermore, we ran a two-way ANOVA to test for an effect of employee ID and discount level on quantity of items per order. With a p-value of .04, we were able to conclude that there is a significant interaction between these two variables. With further post hoc testing, we were able to discover several employee-discount pairs had significant interactions with each other.
 
 ### Are certain types of items more likely to be discounted?
 
@@ -121,7 +121,7 @@ We found that there is a significant effect on the quantity of items ordered whe
 
 Customers who order more often from Northwind Traders have a significantly higher discount level; although, the number of orders was not a strong measure of how much of a discount companies received. Similarly, customers who spend more at Northwind Traders have a significantly higher discount level. Again though, the amount spent was not a strong predictor of discount level.
 
-Some employees sell significantly more discounted products than others and this holds true at all discount levels.
+Some employees sell significantly more discounted products than others and there is also a significant interaction between the different employees and discount level.
 
 There is no significant difference in discount level between categories of products.
 
