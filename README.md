@@ -16,7 +16,7 @@ We begin by looking at the effect of discount on the quantity of items that are 
 
 #### First Hypothesis
 
-𝐻<sub>𝑂</sub> : Discounted orders will have the same quantity of items as non-discounted orders.
+𝐻<sub>𝑂</sub> : Discounted orders will contain fewer or the same number of items as non-discounted orders.
 
 𝐻<sub>𝐴</sub> : Discounted orders will contain more items than non-discounted orders.
 
@@ -47,9 +47,9 @@ Next we want to see if returning customers are more likely to get a discount. We
 
 #### First Hypothesis
 
-𝐻<sub>𝑂</sub> : All companies will have the same disount level.
+𝐻<sub>𝑂</sub> : Companies which have more orders will have a smaller or the same average discount level.
 
-𝐻<sub>𝐴</sub> : Companies who have more orders will have a higher average discount level.
+𝐻<sub>𝐴</sub> : Companies which have more orders will have a higher average discount level.
 
 To test, we ran a one-tailed linear regression. We again used an alpha level of .05.
 
@@ -65,7 +65,7 @@ With an  𝑅2  of .235, we can see that the number of orders a company has plac
 
 #### Second Hypothesis
 
-H<sub>𝑂</sub>: All companies will have the same disount level.
+H<sub>𝑂</sub>: Companies who have spent more will have a smaller or the same discount level.
 
 𝐻<sub>𝐴</sub>: Companies who have spent more will have a higher discount level.
 
@@ -97,7 +97,7 @@ It looks like most employees have somewhat improved sales when items are discoun
 
 ![quantity_sold_by_employee_id_and_discount_level.png](mod3_project_charts/quantity_sold_by_employee_id_and_discount_level.png)
 
-There are noticeable differences between employees at each discount level. We ran a one-way ANOVA to test for a significant effect of employee ID on quantity of items per order. With a p-value of .01, we rejected the null hyothesis. Employees sell a significnatly different amount of discounted items. After running a Turkey-Test, we discovered employee 2 sold significantly more discounted items than employees 6 and 8.  Furthermore, we ran a two-way ANOVA to test for an effect of employee ID and discount level on quantity of items per order. With a p-value of .04, we were able to conclude that there is a significant interaction between these two variables. With further post hoc testing, we were able to discover several employee-discount pairs had significant interactions with each other.
+There are noticeable differences between employees at each discount level. We ran a one-way ANOVA to test for a significant effect of employee ID on quantity of items per order. With a p-value of .01, we rejected the null hyothesis. Employees sell a significnatly different amount of discounted items. After running a Tukey-Test, we discovered employee 2 sold significantly more discounted items than employees 6 and 8.  Furthermore, we ran a two-way ANOVA to test for an effect of employee ID and discount level on quantity of items per order. With a p-value of .04, we were able to conclude that there is a significant interaction between these two variables. With further post hoc testing, we were able to discover several employee-discount pairs had significant interactions with each other.
 
 ### Are certain types of items more likely to be discounted?
 
